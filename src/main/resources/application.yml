@@ -1,0 +1,17 @@
+server:
+  port: 8282
+  servlet:
+    context-path: /
+
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: com.sea4.jpatest.config.database.DatabaseIdentifierNamingStrategy
+  application:
+    name: JpaTest
+
+  batch-datasource:
+    dataSource: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
